@@ -79,10 +79,12 @@
 		1A80274122BBE8E300FBF0EA = {
 			isa = PBXGroup;
 			children = (
+				1A80274B22BBE8E300FBF0EA /* Products */,
+				1A80277E22BBE92700FBF0EA /* SupportingFiles */,
 				1A80274C22BBE8E300FBF0EA /* tmdb */,
 				1A80276422BBE8E400FBF0EA /* tmdbTests */,
 				1A80276F22BBE8E400FBF0EA /* tmdbUITests */,
-				1A80274B22BBE8E300FBF0EA /* Products */,
+				1A80277F22BBE94700FBF0EA /* Utils */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,10 +104,7 @@
 				1A80274D22BBE8E300FBF0EA /* AppDelegate.swift */,
 				1A80274F22BBE8E300FBF0EA /* ViewController.swift */,
 				1A80275122BBE8E300FBF0EA /* Main.storyboard */,
-				1A80275722BBE8E400FBF0EA /* Assets.xcassets */,
 				1A80275922BBE8E400FBF0EA /* LaunchScreen.storyboard */,
-				1A80275C22BBE8E400FBF0EA /* Info.plist */,
-				1A80275422BBE8E300FBF0EA /* tmdb.xcdatamodeld */,
 			);
 			path = tmdb;
 			sourceTree = "<group>";
@@ -126,6 +125,23 @@
 				1A80277222BBE8E400FBF0EA /* Info.plist */,
 			);
 			path = tmdbUITests;
+			sourceTree = "<group>";
+		};
+		1A80277E22BBE92700FBF0EA /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1A80275722BBE8E400FBF0EA /* Assets.xcassets */,
+				1A80275C22BBE8E400FBF0EA /* Info.plist */,
+				1A80275422BBE8E300FBF0EA /* tmdb.xcdatamodeld */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		1A80277F22BBE94700FBF0EA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
-				INFOPLIST_FILE = tmdb/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
-				INFOPLIST_FILE = tmdb/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
