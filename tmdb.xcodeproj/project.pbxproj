@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A80274E22BBE8E300FBF0EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80274D22BBE8E300FBF0EA /* AppDelegate.swift */; };
-		1A80275022BBE8E300FBF0EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80274F22BBE8E300FBF0EA /* ViewController.swift */; };
-		1A80275322BBE8E300FBF0EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A80275122BBE8E300FBF0EA /* Main.storyboard */; };
+		1A80275022BBE8E300FBF0EA /* MovieCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80274F22BBE8E300FBF0EA /* MovieCatalogViewController.swift */; };
+		1A80275322BBE8E300FBF0EA /* MovieCatalogViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A80275122BBE8E300FBF0EA /* MovieCatalogViewController.storyboard */; };
 		1A80275622BBE8E300FBF0EA /* tmdb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A80275422BBE8E300FBF0EA /* tmdb.xcdatamodeld */; };
 		1A80275822BBE8E400FBF0EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A80275722BBE8E400FBF0EA /* Assets.xcassets */; };
 		1A80275B22BBE8E400FBF0EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A80275922BBE8E400FBF0EA /* LaunchScreen.storyboard */; };
@@ -37,8 +37,8 @@
 /* Begin PBXFileReference section */
 		1A80274A22BBE8E300FBF0EA /* tmdb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tmdb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A80274D22BBE8E300FBF0EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A80274F22BBE8E300FBF0EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1A80275222BBE8E300FBF0EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A80274F22BBE8E300FBF0EA /* MovieCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCatalogViewController.swift; sourceTree = "<group>"; };
+		1A80275222BBE8E300FBF0EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MovieCatalogViewController.storyboard; sourceTree = "<group>"; };
 		1A80275522BBE8E300FBF0EA /* tmdb.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tmdb.xcdatamodel; sourceTree = "<group>"; };
 		1A80275722BBE8E400FBF0EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A80275A22BBE8E400FBF0EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				1A80274B22BBE8E300FBF0EA /* Products */,
-				1A80277E22BBE92700FBF0EA /* SupportingFiles */,
 				1A80274C22BBE8E300FBF0EA /* tmdb */,
 				1A80276422BBE8E400FBF0EA /* tmdbTests */,
 				1A80276F22BBE8E400FBF0EA /* tmdbUITests */,
@@ -101,10 +100,8 @@
 		1A80274C22BBE8E300FBF0EA /* tmdb */ = {
 			isa = PBXGroup;
 			children = (
-				1A80274D22BBE8E300FBF0EA /* AppDelegate.swift */,
-				1A80274F22BBE8E300FBF0EA /* ViewController.swift */,
-				1A80275122BBE8E300FBF0EA /* Main.storyboard */,
-				1A80275922BBE8E400FBF0EA /* LaunchScreen.storyboard */,
+				1A80278222BBF6E300FBF0EA /* App */,
+				1A80277E22BBE92700FBF0EA /* SupportingFiles */,
 			);
 			path = tmdb;
 			sourceTree = "<group>";
@@ -142,6 +139,41 @@
 			children = (
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		1A80278022BBF67600FBF0EA /* MovieCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				1A80274F22BBE8E300FBF0EA /* MovieCatalogViewController.swift */,
+				1A80275122BBE8E300FBF0EA /* MovieCatalogViewController.storyboard */,
+			);
+			path = MovieCatalog;
+			sourceTree = "<group>";
+		};
+		1A80278122BBF6B700FBF0EA /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1A80275922BBE8E400FBF0EA /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		1A80278222BBF6E300FBF0EA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1A80274D22BBE8E300FBF0EA /* AppDelegate.swift */,
+				1A80278122BBF6B700FBF0EA /* LaunchScreen */,
+				1A80278022BBF67600FBF0EA /* MovieCatalog */,
+				1A80278322BBF78700FBF0EA /* MovieDescription */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1A80278322BBF78700FBF0EA /* MovieDescription */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MovieDescription;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +282,7 @@
 			files = (
 				1A80275B22BBE8E400FBF0EA /* LaunchScreen.storyboard in Resources */,
 				1A80275822BBE8E400FBF0EA /* Assets.xcassets in Resources */,
-				1A80275322BBE8E300FBF0EA /* Main.storyboard in Resources */,
+				1A80275322BBE8E300FBF0EA /* MovieCatalogViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A80275022BBE8E300FBF0EA /* ViewController.swift in Sources */,
+				1A80275022BBE8E300FBF0EA /* MovieCatalogViewController.swift in Sources */,
 				1A80275622BBE8E300FBF0EA /* tmdb.xcdatamodeld in Sources */,
 				1A80274E22BBE8E300FBF0EA /* AppDelegate.swift in Sources */,
 			);
@@ -313,12 +345,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1A80275122BBE8E300FBF0EA /* Main.storyboard */ = {
+		1A80275122BBE8E300FBF0EA /* MovieCatalogViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1A80275222BBE8E300FBF0EA /* Base */,
 			);
-			name = Main.storyboard;
+			name = MovieCatalogViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		1A80275922BBE8E400FBF0EA /* LaunchScreen.storyboard */ = {
@@ -454,7 +486,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
-				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/tmdb/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,7 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
-				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/tmdb/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
