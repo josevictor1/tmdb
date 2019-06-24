@@ -16,14 +16,11 @@ class MovieCatalogViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView()
     }
-    
-    // MARK: Screen orientation
-    
-
     
     // MARK: CollectionView setup
     private func setUpCollectionView() {
@@ -64,10 +61,8 @@ extension MovieCatalogViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MovieViewCell.self)", for: indexPath) as? MovieViewCell else {
-            fatalError("Dequeue cell with type \(MovieViewCell.self) fail")
+            fatalError("Fail trying to dequeue cell with type \(MovieViewCell.self) ")
         }
-        cell.backgroundColor = .red
-
         return cell
     }
 }

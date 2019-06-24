@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A7126CD22C032BB0089D919 /* HorizontalPagedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7126CB22C032BB0089D919 /* HorizontalPagedViewController.swift */; };
+		1A7126D522C0471A0089D919 /* BackdropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7126D322C0471A0089D919 /* BackdropViewController.swift */; };
+		1A7126D622C0471A0089D919 /* Backdrop.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7126D422C0471A0089D919 /* Backdrop.xib */; };
 		1A80274E22BBE8E300FBF0EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80274D22BBE8E300FBF0EA /* AppDelegate.swift */; };
 		1A80275022BBE8E300FBF0EA /* MovieCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80274F22BBE8E300FBF0EA /* MovieCatalogViewController.swift */; };
 		1A80275322BBE8E300FBF0EA /* MovieCatalogViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A80275122BBE8E300FBF0EA /* MovieCatalogViewController.storyboard */; };
@@ -20,6 +23,8 @@
 		1A8027E022BE860800FBF0EA /* MovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8027DE22BE860800FBF0EA /* MovieViewCell.xib */; };
 		1A8027E222BEA63E00FBF0EA /* MovieDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8027E122BEA63E00FBF0EA /* MovieDescriptionViewController.swift */; };
 		1A8027E422BEA66000FBF0EA /* MovieDescriptionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8027E322BEA66000FBF0EA /* MovieDescriptionViewController.storyboard */; };
+		1AF3CF7522C04F590090DA18 /* PosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3CF7322C04F590090DA18 /* PosterViewController.swift */; };
+		1AF3CF7622C04F590090DA18 /* PosterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AF3CF7422C04F590090DA18 /* PosterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A7126CB22C032BB0089D919 /* HorizontalPagedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPagedViewController.swift; sourceTree = "<group>"; };
+		1A7126D322C0471A0089D919 /* BackdropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackdropViewController.swift; sourceTree = "<group>"; };
+		1A7126D422C0471A0089D919 /* Backdrop.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Backdrop.xib; sourceTree = "<group>"; };
 		1A80274A22BBE8E300FBF0EA /* tmdb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tmdb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A80274D22BBE8E300FBF0EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A80274F22BBE8E300FBF0EA /* MovieCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCatalogViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +67,8 @@
 		1A8027DE22BE860800FBF0EA /* MovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewCell.xib; sourceTree = "<group>"; };
 		1A8027E122BEA63E00FBF0EA /* MovieDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDescriptionViewController.swift; sourceTree = "<group>"; };
 		1A8027E322BEA66000FBF0EA /* MovieDescriptionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDescriptionViewController.storyboard; sourceTree = "<group>"; };
+		1AF3CF7322C04F590090DA18 /* PosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterViewController.swift; sourceTree = "<group>"; };
+		1AF3CF7422C04F590090DA18 /* PosterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +103,36 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1A7126B722C00EEF0089D919 /* CatalogFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				1A80278622BC588300FBF0EA /* CatalogFlowLayout.swift */,
+			);
+			path = CatalogFlowLayout;
+			sourceTree = "<group>";
+		};
+		1A7126B822C00F0A0089D919 /* HorizontalPagedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A7126CB22C032BB0089D919 /* HorizontalPagedViewController.swift */,
+			);
+			path = HorizontalPagedViewController;
+			sourceTree = "<group>";
+		};
+		1A7126D122C038930089D919 /* BackDropViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A7126D322C0471A0089D919 /* BackdropViewController.swift */,
+				1A7126D422C0471A0089D919 /* Backdrop.xib */,
+			);
+			path = BackDropViewController;
+			sourceTree = "<group>";
+		};
 		1A80274122BBE8E300FBF0EA = {
 			isa = PBXGroup;
 			children = (
 				1A80274B22BBE8E300FBF0EA /* Products */,
-				1A80274C22BBE8E300FBF0EA /* tmdb */,
+				1A80274C22BBE8E300FBF0EA /* App */,
 				1A80276422BBE8E400FBF0EA /* tmdbTests */,
 				1A80276F22BBE8E400FBF0EA /* tmdbUITests */,
 				1A80277F22BBE94700FBF0EA /* Utils */,
@@ -114,14 +149,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1A80274C22BBE8E300FBF0EA /* tmdb */ = {
+		1A80274C22BBE8E300FBF0EA /* App */ = {
 			isa = PBXGroup;
 			children = (
-				1A80278422BC578B00FBF0EA /* Utils */,
-				1A80278222BBF6E300FBF0EA /* App */,
+				1A80274D22BBE8E300FBF0EA /* AppDelegate.swift */,
+				1A80278122BBF6B700FBF0EA /* LaunchScreen */,
+				1A80278222BBF6E300FBF0EA /* Scenes */,
 				1A80277E22BBE92700FBF0EA /* SupportingFiles */,
+				1A80278422BC578B00FBF0EA /* Utils */,
 			);
-			path = tmdb;
+			path = App;
 			sourceTree = "<group>";
 		};
 		1A80276422BBE8E400FBF0EA /* tmdbTests */ = {
@@ -177,15 +214,13 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
-		1A80278222BBF6E300FBF0EA /* App */ = {
+		1A80278222BBF6E300FBF0EA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				1A80274D22BBE8E300FBF0EA /* AppDelegate.swift */,
-				1A80278122BBF6B700FBF0EA /* LaunchScreen */,
 				1A80278022BBF67600FBF0EA /* MovieCatalog */,
 				1A80278322BBF78700FBF0EA /* MovieDescription */,
 			);
-			path = App;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		1A80278322BBF78700FBF0EA /* MovieDescription */ = {
@@ -209,7 +244,8 @@
 		1A80278522BC579A00FBF0EA /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				1A80278622BC588300FBF0EA /* CatalogFlowLayout.swift */,
+				1A7126B822C00F0A0089D919 /* HorizontalPagedViewController */,
+				1A7126B722C00EEF0089D919 /* CatalogFlowLayout */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -219,8 +255,19 @@
 			children = (
 				1A8027DD22BE860800FBF0EA /* MovieViewCell.swift */,
 				1A8027DE22BE860800FBF0EA /* MovieViewCell.xib */,
+				1A7126D122C038930089D919 /* BackDropViewController */,
+				1AF3CF7222C04F3B0090DA18 /* PosterViewController */,
 			);
 			path = MovieCell;
+			sourceTree = "<group>";
+		};
+		1AF3CF7222C04F3B0090DA18 /* PosterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1AF3CF7322C04F590090DA18 /* PosterViewController.swift */,
+				1AF3CF7422C04F590090DA18 /* PosterViewController.xib */,
+			);
+			path = PosterViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,9 +375,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A80275B22BBE8E400FBF0EA /* LaunchScreen.storyboard in Resources */,
+				1A7126D622C0471A0089D919 /* Backdrop.xib in Resources */,
 				1A8027E022BE860800FBF0EA /* MovieViewCell.xib in Resources */,
 				1A80275822BBE8E400FBF0EA /* Assets.xcassets in Resources */,
 				1A8027E422BEA66000FBF0EA /* MovieDescriptionViewController.storyboard in Resources */,
+				1AF3CF7622C04F590090DA18 /* PosterViewController.xib in Resources */,
 				1A80275322BBE8E300FBF0EA /* MovieCatalogViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,10 +407,13 @@
 			files = (
 				1A80275022BBE8E300FBF0EA /* MovieCatalogViewController.swift in Sources */,
 				1A80278722BC588300FBF0EA /* CatalogFlowLayout.swift in Sources */,
+				1AF3CF7522C04F590090DA18 /* PosterViewController.swift in Sources */,
+				1A7126CD22C032BB0089D919 /* HorizontalPagedViewController.swift in Sources */,
 				1A8027E222BEA63E00FBF0EA /* MovieDescriptionViewController.swift in Sources */,
 				1A8027DF22BE860800FBF0EA /* MovieViewCell.swift in Sources */,
 				1A80275622BBE8E300FBF0EA /* tmdb.xcdatamodeld in Sources */,
 				1A80274E22BBE8E300FBF0EA /* AppDelegate.swift in Sources */,
+				1A7126D522C0471A0089D919 /* BackdropViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,10 +587,10 @@
 		1A80277622BBE8E400FBF0EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
-				INFOPLIST_FILE = "$(SRCROOT)/tmdb/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -553,10 +605,10 @@
 		1A80277722BBE8E400FBF0EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
-				INFOPLIST_FILE = "$(SRCROOT)/tmdb/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
