@@ -2,29 +2,37 @@
 //  MovieViewCell.swift
 //  tmdb
 //
-//  Created by José Victor Pereira Costa on 22/06/19.
+//  Created by José Victor Pereira Costa on 25/06/19.
 //  Copyright © 2019 José Victor Pereira Costa. All rights reserved.
 //
 
 import UIKit
 
-
 class MovieViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var genreLabel: UILabel!
-    @IBOutlet weak var releaseDateLabel: UILabel!
-    @IBOutlet weak var posterImageView: UIImageView!
+    // MARK: Properties
+    lazy var pageViewController: HorizontalPagedViewController? = {
+        return HorizontalPagedViewController(transitionStyle: .scroll,
+                                                  navigationOrientation: .horizontal,
+                                                  options: nil)
+    }()
+
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    // MARK: Setup PageViewController
+    func setUpLayout() {
+        setUpContainerConstraints()
     }
     
-    func fillWith(name: String, genre: String, releaseDate: String, posterImage: UIImage) {
-        nameLabel.text = name
-        genreLabel.text = genre
-        releaseDateLabel.text = releaseDate
-        posterImageView.image = posterImage
+    private func setUpContainerConstraints() {
+        
+        guard let pageViewController = pageViewController else { return }
+        
+        pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(pageViewController.view)
+        pageViewController.view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0).isActive = true
+        pageViewController.view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
+        pageViewController.view.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        pageViewController.view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
+
 }

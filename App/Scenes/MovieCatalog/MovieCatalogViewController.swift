@@ -44,7 +44,7 @@ class MovieCatalogViewController: UIViewController {
     }
     
     private func registerCollectionViewCells() {
-        collectionView.register(UINib(nibName: "\(MovieViewCell.self)", bundle: Bundle.main), forCellWithReuseIdentifier: "\(MovieViewCell.self)")
+        collectionView.register(MovieViewCell.self, forCellWithReuseIdentifier: "\(MovieViewCell.self)")
     }
 }
 
@@ -63,6 +63,7 @@ extension MovieCatalogViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MovieViewCell.self)", for: indexPath) as? MovieViewCell else {
             fatalError("Fail trying to dequeue cell with type \(MovieViewCell.self) ")
         }
+        cell.setUpLayout()
         return cell
     }
 }

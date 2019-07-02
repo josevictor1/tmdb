@@ -2,16 +2,17 @@
 //  PosterViewController.swift
 //  tmdb
 //
-//  Created by José Victor Pereira Costa on 23/06/19.
+//  Created by José Victor Pereira Costa on 30/06/19.
 //  Copyright © 2019 José Victor Pereira Costa. All rights reserved.
 //
 
 import UIKit
 
-class PosterViewController: UIPageViewController {
+class PosterViewController: UIViewController {
     
-    // MARK: Properties
-    @IBOutlet weak var bluredPosterImage: UIImageView!
+    // MARK: IBOutlets
+    @IBOutlet weak var backGroundImage: UIImageView!
+    @IBOutlet weak var blurVisualEffect: UIVisualEffectView!
     @IBOutlet weak var posterImage: UIImageView!
     
     // MARK: Life cycle

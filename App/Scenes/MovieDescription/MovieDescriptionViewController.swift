@@ -12,11 +12,14 @@ class MovieDescriptionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func changeBackgroundCollor(_ sender: Any) {
+        view.backgroundColor = .blue
+    }
+    
     /*
     // MARK: - Navigation
 

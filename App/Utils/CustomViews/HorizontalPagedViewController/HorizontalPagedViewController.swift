@@ -9,26 +9,108 @@
 import UIKit
 
 class HorizontalPagedViewController: UIPageViewController {
-
-    var pages: [UIViewController] = []
     
+    // MARK: Properties
+    private lazy var viewControllersList: [UIViewController] = {
+       return [PosterViewController.xibViewController(),
+               BackdropViewController.xibViewController()]
+    }()
+    
+    private lazy var customSpine: UIPageControl = {
+        return UIPageControl()
+    }()
+    
+    // MARK: Initialization
+
+    // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpPageDataSource()
+        setUpViewControllers()
     }
     
+    // MARK: Setup UIPageViewControllerDataSource
     private func setUpPageDataSource() {
         dataSource = self
     }
     
+    private func setUpViewControllers() {
+        if let firsViewController = viewControllersList.first {
+            setViewControllers([firsViewController],
+                               direction: .forward,
+                               animated: true,
+                               completion: nil)
+        }
+    }
+    
+    private func setUpCustomSpine() {
+        
+    }
+    
+    
+    private func setUpCustomSpineConstraint() {
+        //customSpine.leadingAnchor.constraint(equalToSystemSpacingAfter: view., multiplier: <#T##CGFloat#>)
+    }
 }
 
+// MARK: - UIPageViewControllerDataSource
 extension HorizontalPagedViewController: UIPageViewControllerDataSource {
+    
+    private func lastViewController(before viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = viewControllersList.firstIndex(of: viewController) else {
+            return nil
+        }
+        
+        let previousIndex = viewControllerIndex - 1
+        
+        guard previousIndex >= 0 else {
+            return viewControllersList.last
+        }
+        
+        guard viewControllersList.count > previousIndex else {
+            return nil
+        }
+        
+        return viewControllersList[previousIndex]
+    }
+    
+    private func nextViewController(after viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = viewControllersList.firstIndex(of: viewController) else {
+            return nil
+        }
+        
+        let nextIndex = viewControllerIndex + 1
+        let viewControllersListCount = viewControllersList.count
+        
+        guard viewControllersListCount != nextIndex else {
+            return viewControllersList.first
+        }
+        
+        guard viewControllersListCount > nextIndex else {
+            return nil
+        }
+        
+        return viewControllersList[nextIndex]
+    }
+    
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return viewControllersList.count
+    }
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        guard let viewController = viewControllers?.first,
+              let index = viewControllersList.firstIndex(of: viewController) else {
+            return 0
+        }
+        
+        return index
+    }
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        return nil
+        return lastViewController(before: viewController)
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        return nil
+        return nextViewController(after: viewController)
     }
 }
