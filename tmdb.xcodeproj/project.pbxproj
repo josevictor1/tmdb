@@ -157,11 +157,11 @@
 		1A80274C22BBE8E300FBF0EA /* App */ = {
 			isa = PBXGroup;
 			children = (
-				1A80274D22BBE8E300FBF0EA /* AppDelegate.swift */,
+				1A91524422D0C843003CF4DA /* AppDelegate */,
 				1A80278122BBF6B700FBF0EA /* LaunchScreen */,
 				1A80278222BBF6E300FBF0EA /* Scenes */,
 				1A80277E22BBE92700FBF0EA /* SupportingFiles */,
-				1A80278422BC578B00FBF0EA /* Utils */,
+				1A80278422BC578B00FBF0EA /* Library */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -237,13 +237,13 @@
 			path = MovieDescription;
 			sourceTree = "<group>";
 		};
-		1A80278422BC578B00FBF0EA /* Utils */ = {
+		1A80278422BC578B00FBF0EA /* Library */ = {
 			isa = PBXGroup;
 			children = (
 				1A7126B422C0021C0089D919 /* Extensions */,
 				1A80278522BC579A00FBF0EA /* CustomViews */,
 			);
-			path = Utils;
+			path = Library;
 			sourceTree = "<group>";
 		};
 		1A80278522BC579A00FBF0EA /* CustomViews */ = {
@@ -262,6 +262,14 @@
 				1AF3CF9722C814280090DA18 /* PagesProtocol.swift */,
 			);
 			path = MovieCell;
+			sourceTree = "<group>";
+		};
+		1A91524422D0C843003CF4DA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1A80274D22BBE8E300FBF0EA /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		1AF3CF7222C04F3B0090DA18 /* PosterViewController */ = {

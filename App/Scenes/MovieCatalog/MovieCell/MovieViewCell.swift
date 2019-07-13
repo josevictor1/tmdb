@@ -17,7 +17,6 @@ class MovieViewCell: UICollectionViewCell {
                                                   options: nil)
     }()
 
-    
     // MARK: Setup PageViewController
     func setUpLayout() {
         setUpContainerConstraints()
