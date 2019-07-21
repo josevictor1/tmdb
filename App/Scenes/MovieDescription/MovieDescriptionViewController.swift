@@ -15,11 +15,7 @@ class MovieDescriptionViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func changeBackgroundCollor(_ sender: Any) {
-        view.backgroundColor = .blue
-    }
-    
+        
     /*
     // MARK: - Navigation
 

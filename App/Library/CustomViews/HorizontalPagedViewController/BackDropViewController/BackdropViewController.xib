@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BackdropViewController" customModule="tmdb" customModuleProvider="target">
             <connections>
                 <outlet property="genre" destination="rzT-a2-ZZe" id="Kjg-IS-p3k"/>
-                <outlet property="gradientView" destination="8fT-Zr-Tz9" id="HBH-OS-9pb"/>
+                <outlet property="gradientView" destination="8fT-Zr-Tz9" id="hYX-DN-6Og"/>
                 <outlet property="movieName" destination="HcO-V3-IYM" id="T8Q-P6-F5t"/>
                 <outlet property="releaseDate" destination="9g2-rj-Nav" id="Smt-gj-D8m"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -28,11 +28,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="364" height="387"/>
                     <color key="backgroundColor" red="0.1843137255" green="0.1960784314" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fT-Zr-Tz9">
-                    <rect key="frame" x="0.0" y="287" width="364" height="100"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fT-Zr-Tz9" customClass="GradientView" customModule="tmdb" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="237" width="364" height="150"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BNf-cR-ih4">
-                            <rect key="frame" x="5" y="5" width="273" height="83"/>
+                            <rect key="frame" x="5" y="67" width="273" height="83"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Lord of The Rings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HcO-V3-IYM">
                                     <rect key="frame" x="0.0" y="0.0" width="273" height="32.5"/>
@@ -60,12 +60,19 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="Gma-78-1nF"/>
-                        <constraint firstItem="BNf-cR-ih4" firstAttribute="top" secondItem="8fT-Zr-Tz9" secondAttribute="top" constant="5" id="Knl-gY-nVA"/>
+                        <constraint firstAttribute="height" constant="150" id="Gma-78-1nF"/>
+                        <constraint firstAttribute="bottom" secondItem="BNf-cR-ih4" secondAttribute="bottom" id="Y7Q-NI-l4F"/>
                         <constraint firstItem="BNf-cR-ih4" firstAttribute="leading" secondItem="8fT-Zr-Tz9" secondAttribute="leading" constant="5" id="aTJ-HF-oW8"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                            <color key="value" red="0.1217294708" green="0.12931650880000001" blue="0.1372573376" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

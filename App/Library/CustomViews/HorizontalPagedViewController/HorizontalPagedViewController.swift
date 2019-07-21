@@ -12,12 +12,8 @@ class HorizontalPagedViewController: UIPageViewController {
     
     // MARK: Properties
     private lazy var viewControllersList: [UIViewController] = {
-       return [PosterViewController.xibInstance(),
-               BackdropViewController.xibInstance()]
-    }()
-    
-    private lazy var customSpine: UIPageControl = {
-        return UIPageControl()
+       return [BackdropViewController.xibInstance(),
+               PosterViewController.xibInstance()]
     }()
     
     // MARK: Initialization
@@ -27,7 +23,7 @@ class HorizontalPagedViewController: UIPageViewController {
         super.viewDidLoad()
         setUpPageDataSource()
         setUpViewControllers()
-        setUpCustomSpine()
+
     }
     
     // MARK: Setup UIPageViewControllerDataSource
@@ -44,18 +40,6 @@ class HorizontalPagedViewController: UIPageViewController {
         }
     }
     
-    private func setUpCustomSpine() {
-        view.addSubview(customSpine)
-        setUpCustomSpineConstraint()
-    }
-    
-    
-    private func setUpCustomSpineConstraint() {
-        customSpine.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0)
-        customSpine.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
-        customSpine.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 30)
-        customSpine.heightAnchor.constraint(equalToConstant: 60)
-    }
 }
 
 // MARK: - UIPageViewControllerDataSource

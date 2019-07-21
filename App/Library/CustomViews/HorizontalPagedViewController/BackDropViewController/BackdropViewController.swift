@@ -11,7 +11,7 @@ import UIKit
 class BackdropViewController: UIViewController {
     
     // MARK: Properties
-    @IBOutlet weak var gradientView: UIView!
+    @IBOutlet weak var gradientView: GradientView!
     @IBOutlet weak var movieName: UILabel!
     @IBOutlet weak var releaseDate: UILabel!
     @IBOutlet weak var genre: UILabel!

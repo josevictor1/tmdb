@@ -14,6 +14,7 @@ class PosterViewController: UIViewController {
     @IBOutlet weak var backGroundImage: UIImageView!
     @IBOutlet weak var blurVisualEffect: UIVisualEffectView!
     @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var gradientView: GradientView!
     
     // MARK: Life cycle
     override func viewDidLoad() {

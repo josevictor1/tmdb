@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="backGroundImage" destination="Jpe-89-fie" id="Zi4-j3-cIn"/>
                 <outlet property="blurVisualEffect" destination="zbw-WO-EDd" id="qAT-jX-TCX"/>
+                <outlet property="gradientView" destination="IxW-4c-atY" id="SAW-9p-Veq"/>
                 <outlet property="posterImage" destination="DSr-5k-fY6" id="2gZ-JT-gyO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,6 +32,20 @@
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DCW-rQ-Ryq">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="342"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IxW-4c-atY" customClass="GradientView" customModule="tmdb" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="242" width="360" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ejX-6y-QwC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="IxW-4c-atY" firstAttribute="leading" secondItem="DCW-rQ-Ryq" secondAttribute="leading" id="OkK-ql-kRb"/>
+                            <constraint firstAttribute="bottom" secondItem="IxW-4c-atY" secondAttribute="bottom" id="WH8-Vl-6Zd"/>
+                            <constraint firstAttribute="trailing" secondItem="IxW-4c-atY" secondAttribute="trailing" id="in2-AY-cG4"/>
+                        </constraints>
                     </view>
                     <blurEffect style="light"/>
                 </visualEffectView>
