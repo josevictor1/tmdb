@@ -11,10 +11,8 @@ import UIKit
 class MovieViewCell: UICollectionViewCell {
     
     // MARK: Properties
-    lazy var pageViewController: HorizontalPagedViewController? = {
-        return HorizontalPagedViewController(transitionStyle: .scroll,
-                                                  navigationOrientation: .horizontal,
-                                                  options: nil)
+    lazy var pageViewController: BackdropViewController? = {
+        return BackdropViewController.xibInstance()
     }()
 
     // MARK: Setup PageViewController

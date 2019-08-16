@@ -10,23 +10,23 @@ import UIKit
 
 class HorizontalPagedViewController: UIPageViewController {
     
-    // MARK: Properties
+    // MARK: - Properties
+    
     private lazy var viewControllersList: [UIViewController] = {
        return [BackdropViewController.xibInstance(),
                PosterViewController.xibInstance()]
     }()
-    
-    // MARK: Initialization
 
-    // MARK: Life cycle
+    // MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpPageDataSource()
         setUpViewControllers()
-
     }
     
-    // MARK: Setup UIPageViewControllerDataSource
+    // MARK: - Setup
+    
     private func setUpPageDataSource() {
         dataSource = self
     }
@@ -103,3 +103,4 @@ extension HorizontalPagedViewController: UIPageViewControllerDataSource {
         return nextViewController(after: viewController)
     }
 }
+

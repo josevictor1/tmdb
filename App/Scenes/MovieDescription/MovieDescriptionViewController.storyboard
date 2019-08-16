@@ -17,13 +17,107 @@
                     <view key="view" contentMode="scaleToFill" id="xTz-kQ-0Az">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="uPv-1a-ZIc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="pJ2-3l-qAc">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1152.6666666666667"/>
+                                        <subviews>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bu1-2e-KFV">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="UmR-CV-WCQ"/>
+                                                </constraints>
+                                                <connections>
+                                                    <segue destination="ukc-EM-Zux" kind="embed" id="gyS-au-PBd"/>
+                                                </connections>
+                                            </containerView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-2Q-txD">
+                                                <rect key="frame" x="20" y="40" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Tbu-o0-o11"/>
+                                                    <constraint firstAttribute="height" constant="40" id="yB3-kG-Krw"/>
+                                                </constraints>
+                                                <state key="normal" image="close-button">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="closeButtonTapped:" destination="8mb-qy-A1d" eventType="touchUpInside" id="66N-Pg-143"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lV4-Yf-aYz">
+                                                <rect key="frame" x="10" y="399.99999999999994" width="394" height="752.66666666666652"/>
+                                                <mutableString key="text">Swift is a new programming language for iOS, macOS, watchOS, and tvOS app development. Nonetheless, many parts of Swift will be familiar from your experience of developing in C and Objective-C.
+
+Swift provides its own versions of all fundamental C and Objective-C types, including Int for integers, Double and Float for floating-point values, Bool for Boolean values, and String for textual data. Swift also provides powerful versions of the three primary collection types, Array, Set, and Dictionary, as described in Collection Types.
+
+Like C, Swift uses variables to store and refer to values by an identifying name. Swift also makes extensive use of variables whose values can’t be changed. These are known as constants, and are much more powerful than constants in C. Constants are used throughout Swift to make code safer and clearer in intent when you work with values that don’t need to change.   Swift provides its own versions of all fundamental C and Objective-C types, including Int for integers, Double and Float for floating-point values, Bool for Boolean values, and String for textual data. Swift also provides powerful versions of the three primary collection types, Array, Set, and Dictionary, as described in Collection Types.
+
+Like C, Swift uses variables to store and refer to values by an identifying name. Swift also makes extensive use of variables whose values can’t be changed. These are known as constants, and are much more powerful than constants in C. Constants are used throughout Swift to make code safer and clearer in intent when you work with values that don’t need to change.</mutableString>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.1217294708" green="0.12931650880000001" blue="0.1372573376" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bu1-2e-KFV" secondAttribute="trailing" id="0vf-aU-yRJ"/>
+                                            <constraint firstItem="bu1-2e-KFV" firstAttribute="top" secondItem="pJ2-3l-qAc" secondAttribute="top" id="38E-rJ-x4R"/>
+                                            <constraint firstItem="bu1-2e-KFV" firstAttribute="leading" secondItem="pJ2-3l-qAc" secondAttribute="leading" id="QLw-Im-GZI"/>
+                                            <constraint firstItem="lV4-Yf-aYz" firstAttribute="top" secondItem="bu1-2e-KFV" secondAttribute="bottom" id="S7k-oU-9p2"/>
+                                            <constraint firstItem="ecE-2Q-txD" firstAttribute="top" secondItem="pJ2-3l-qAc" secondAttribute="top" constant="40" id="Wwu-aD-fvW"/>
+                                            <constraint firstAttribute="bottom" secondItem="lV4-Yf-aYz" secondAttribute="bottom" id="fid-9U-Fuu"/>
+                                            <constraint firstAttribute="trailing" secondItem="lV4-Yf-aYz" secondAttribute="trailing" constant="10" id="j6f-Td-Acl"/>
+                                            <constraint firstItem="lV4-Yf-aYz" firstAttribute="leading" secondItem="pJ2-3l-qAc" secondAttribute="leading" constant="10" id="o4P-OF-4oQ"/>
+                                            <constraint firstItem="ecE-2Q-txD" firstAttribute="leading" secondItem="pJ2-3l-qAc" secondAttribute="leading" constant="20" id="owb-0S-sNy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pJ2-3l-qAc" firstAttribute="centerX" secondItem="uPv-1a-ZIc" secondAttribute="centerX" id="2XM-qL-VJQ"/>
+                                    <constraint firstItem="pJ2-3l-qAc" firstAttribute="top" secondItem="uPv-1a-ZIc" secondAttribute="top" id="3nC-0x-FuZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="pJ2-3l-qAc" secondAttribute="trailing" id="k0V-Ec-qCg"/>
+                                    <constraint firstItem="pJ2-3l-qAc" firstAttribute="leading" secondItem="uPv-1a-ZIc" secondAttribute="leading" id="sEL-iH-eot"/>
+                                    <constraint firstAttribute="bottom" secondItem="pJ2-3l-qAc" secondAttribute="bottom" id="uca-BN-zEl"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uPv-1a-ZIc" firstAttribute="top" secondItem="xTz-kQ-0Az" secondAttribute="top" id="4aN-AL-yhk"/>
+                            <constraint firstAttribute="bottom" secondItem="uPv-1a-ZIc" secondAttribute="bottom" id="GWv-sR-31X"/>
+                            <constraint firstItem="uPv-1a-ZIc" firstAttribute="leading" secondItem="umz-4T-ONV" secondAttribute="leading" id="pqO-l9-6B6"/>
+                            <constraint firstItem="umz-4T-ONV" firstAttribute="trailing" secondItem="uPv-1a-ZIc" secondAttribute="trailing" id="y7i-WD-hWu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="umz-4T-ONV"/>
                     </view>
+                    <connections>
+                        <outlet property="synopsisLabel" destination="lV4-Yf-aYz" id="Spa-di-hpB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khc-se-azx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-781" y="39"/>
         </scene>
+        <!--Horizontal Paged View Controller-->
+        <scene sceneID="biG-9a-wOV">
+            <objects>
+                <viewController id="ukc-EM-Zux" customClass="HorizontalPagedViewController" customModule="tmdb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Whv-0E-GtI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5UV-AK-UXM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBi-2r-XnM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="39"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="close-button" width="96" height="96"/>
+    </resources>
 </document>

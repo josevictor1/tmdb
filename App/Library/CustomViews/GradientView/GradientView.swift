@@ -33,27 +33,25 @@ open class GradientView: UIView {
     }
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpGradient()
+        setUpGradient(with: frame)
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setUpGradient()
     }
     
     lazy var gradientLayer: CAGradientLayer = {
         let layer = CAGradientLayer()
-        layer.frame = bounds
         return layer
     }()
     
-    open func setUpGradient() {
+    open func setUpGradient(with frame: CGRect) {
+        gradientLayer.frame = bounds
         addGradientAsSublayer()
         updateGradient()
     }
     
     private func addGradientAsSublayer() {
-        //gradientLayer.removeFromSuperlayer()
         layer.insertSublayer(gradientLayer, at: 0)
     }
     
@@ -73,12 +71,11 @@ open class GradientView: UIView {
     
     open override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-        setUpGradient()
     }
     
     open override func layoutSubviews() {
         super.layoutSubviews()
-        setUpGradient()
+        setUpGradient(with: frame)
     }
     
 }

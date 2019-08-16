@@ -32,7 +32,7 @@
                     <rect key="frame" x="0.0" y="237" width="364" height="150"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BNf-cR-ih4">
-                            <rect key="frame" x="5" y="67" width="273" height="83"/>
+                            <rect key="frame" x="5" y="57" width="273" height="83"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Lord of The Rings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HcO-V3-IYM">
                                     <rect key="frame" x="0.0" y="0.0" width="273" height="32.5"/>
@@ -62,7 +62,7 @@
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="Gma-78-1nF"/>
-                        <constraint firstAttribute="bottom" secondItem="BNf-cR-ih4" secondAttribute="bottom" id="Y7Q-NI-l4F"/>
+                        <constraint firstAttribute="bottom" secondItem="BNf-cR-ih4" secondAttribute="bottom" constant="10" id="Y7Q-NI-l4F"/>
                         <constraint firstItem="BNf-cR-ih4" firstAttribute="leading" secondItem="8fT-Zr-Tz9" secondAttribute="leading" constant="5" id="aTJ-HF-oW8"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>

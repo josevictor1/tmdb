@@ -51,6 +51,7 @@ class MovieCatalogViewController: UIViewController {
         addChild(viewController)
         viewController.didMove(toParent: self)
     }
+    
 }
 
 // MARK: - UICollectionViewDataSource
@@ -77,6 +78,7 @@ extension MovieCatalogViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension MovieCatalogViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let viewController = MovieDescriptionViewController.storyboardInstance()
+        present(viewController, animated: true)
     }
 }
