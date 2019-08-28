@@ -29,4 +29,3 @@ extension Initializable where Self: UIViewController {
 }
 
 extension UIViewController: Initializable { }
-

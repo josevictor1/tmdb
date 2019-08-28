@@ -10,22 +10,21 @@ import UIKit
 
 class MovieCatalogViewController: UIViewController {
     
-    // MARK: Properties
-    var movies: [[Int]] = [[1,2,3,4,5,6,7,8,9,10,11,12,13,4,6,4,3,5,2,1], [1,2,3,4,5,6,7,8,9,10,11,12,13,4,6,4,3,5,2,1]]
-    
     // MARK: IBOutlets
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView()
     }
     
-    // MARK: CollectionView setup
+    // MARK: Collection View setup
+    
     private func setUpCollectionView() {
         setUpCollectionViewFlowLayout()
-        setUpCollectionViewDataSource()
         setUpCollectionViewDelegate()
         registerCollectionViewCells()
     }
@@ -39,10 +38,6 @@ class MovieCatalogViewController: UIViewController {
         collectionView.delegate = self
     }
     
-    private func setUpCollectionViewDataSource() {
-        collectionView.dataSource = self
-    }
-    
     private func registerCollectionViewCells() {
         collectionView.register(MovieViewCell.self, forCellWithReuseIdentifier: "\(MovieViewCell.self)")
     }
@@ -52,27 +47,6 @@ class MovieCatalogViewController: UIViewController {
         viewController.didMove(toParent: self)
     }
     
-}
-
-// MARK: - UICollectionViewDataSource
-extension MovieCatalogViewController: UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return movies.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movies[section].count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MovieViewCell.self)", for: indexPath) as? MovieViewCell else {
-            fatalError("Fail trying to dequeue cell with type \(MovieViewCell.self) ")
-        }
-        setUpChildViewControllers(cell.pageViewController!)
-        cell.setUpLayout()
-        return cell
-    }
 }
 
 // MARK: - UICollectionViewDelegate

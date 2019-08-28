@@ -11,7 +11,6 @@ import UIKit
 @IBDesignable
 open class GradientView: UIView {
     
-    @IBInspectable
     open var graditenDirection: GradientDirection = .vertical {
         didSet{
             updateGradientDirection()

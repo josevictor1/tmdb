@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc public enum GradientDirection: Int {
+public enum GradientDirection: Int {
     
     case horizontal = 0
     case vertical = 1
