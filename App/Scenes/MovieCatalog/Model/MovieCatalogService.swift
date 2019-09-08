@@ -12,18 +12,7 @@ import Foundation
 class MovieCatalogService {
     
     func fetchMovies(_ completionHandler: @escaping ((Result<[Movie], Error>) -> Void)) {
-        completionHandler(.success([Movie(name: "StarWars",
-                                          releaseDate: "19/05/1995",
-                                          genre: "Comedia"),
-                                    Movie(name: "StarWars",
-                                          releaseDate: "19/05/1995",
-                                          genre: "Comedia"),
-                                    Movie(name: "StarWars",
-                                          releaseDate: "19/05/1995",
-                                          genre: "Comedia"),
-                                    Movie(name: "StarWars",
-                                          releaseDate: "19/05/1995",
-                                          genre: "Comedia")]))
+        
     }
     
 }

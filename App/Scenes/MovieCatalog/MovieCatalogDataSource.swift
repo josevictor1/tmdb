@@ -46,7 +46,6 @@ class MovieCatalogDataSource: NSObject, UICollectionViewDataSource {
         }
     }
     
-    
 }
 
 extension MovieCatalogDataSource {
